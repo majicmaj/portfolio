@@ -24,17 +24,25 @@ document.body.addEventListener('keydown', (e) => {
                 openGallery()
                 break;
             case 'pwd':
-                console.log('PWD')
                 input.value = ''
                 logg(pwd)
                 break;
-
+            case 'oakton':
+                schedule()
+                input.value = ''
+                break;
             default:
                 cnf()
                 break;
         }
     }
 })
+schedule = () => {
+    window.open('https://bit.ly/oaktonschedule')
+    let line = document.createElement('P')
+    line.innerHTML = consoleWindow.children[consoleWindow.children.length - 1].innerHTML.replace('<input class="input" type="text">', '') + ' ' + input.value
+    consoleWindow.insertBefore(line, consoleWindow.children[consoleWindow.children.length - 1])
+}
 cnf = () => {
     let line = document.createElement('P')
     let line2 = document.createElement('P')
