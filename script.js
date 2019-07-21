@@ -1,10 +1,10 @@
 let consoleWindow = document.body.querySelector('.console')
 let inline = document.body.querySelector('.inline')
 let input = document.querySelector('.input')
-let homeLine = `<span class="green">MajdTarbin@Ubuntu</span>:<span class="blue">~/home</span>$ cd ..`
-let blogLine = `<span class="green">MajdTarbin@Ubuntu</span>:<span class="blue">~/home</span>$ cd blog`
-let galleryLine = `<span class="green">MajdTarbin@Ubuntu</span>:<span class="blue">~/home</span>$ cd gallery`
-let contactLine = `<span class="green">MajdTarbin@Ubuntu</span>:<span class="blue">~/home</span>$ cd contact`
+let homeLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd ..`
+let blogLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd blog`
+let galleryLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd gallery`
+let contactLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd contact`
 let project1Line = `<span class="blue"><a href='https://majicmaj.github.io/'>Rocket Ball</a></span> &nbsp; <span class="blue">Other</span>`
 let pwd = 'home'
 let nac = ['Command not found.', 'Try: cd home']

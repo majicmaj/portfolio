@@ -82,6 +82,7 @@ textarea:focus, input:focus {
     position: relative;
     top: 0px;
     left: 0px;
+    width: 100%;
 }
 
 .input {
@@ -104,5 +105,17 @@ textarea:focus, input:focus {
         width: 100%;
         /* max-width: 800px; */
     }
-    
+    .console p {
+        margin-top: 12px;
+        color: #ddd;
+        font-size: 14px;
+        line-height: 0.05;
+    }
+    .socials {
+        padding: 3px;
+    }
+    .input {
+        width: 50px;
+        font-size: 14px;
+    }
   }
