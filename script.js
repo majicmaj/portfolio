@@ -1,77 +1,121 @@
-let consoleWindow = document.body.querySelector('.console')
-let inline = document.body.querySelector('.inline')
-let input = document.querySelector('.input')
-let homeLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd ..`
-let blogLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd blog`
-let galleryLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd gallery`
-let contactLine = `<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>$ cd contact`
-let project1Line = `<span class="blue"><a href='https://majicmaj.github.io/'>Rocket Ball</a></span> &nbsp; <span class="blue">Other</span>`
-let pwd = 'home'
-let nac = ['Command not found.', 'Try: cd home']
-
-window.onload = function () {
-    document.querySelector('.input').focus();
-}
-document.body.addEventListener('click', () => {
-    document.querySelector('.input').focus();
-})
-document.body.addEventListener('keydown', (e) => {
-    console.log(e.key)
-    if (e.key === 'Enter') {
-        switch (input.value) {
-            case 'gallery':
-                input.value = ''
-                openGallery()
-                break;
-            case 'pwd':
-                input.value = ''
-                logg(pwd)
-                break;
-            case 'oakton':
-                schedule()
-                input.value = ''
-                break;
-            default:
-                cnf()
-                break;
+//Variables
+let line = document.querySelector('.line')
+let con = document.querySelector('.console')
+let titleBar = document.querySelector('.bar')
+let maj = [
+    {
+        start: 18,
+        end: 22.5,
+        date: {
+            name: "Monday",
+            month: 7,
+            day: 29
+        }
+    },
+    {
+        start: 12,
+        end: 17,
+        date: {
+            name: "Saturday",
+            month: 8,
+            day: 3
         }
     }
+]
+let mad = [
+    {
+        start: 17,
+        end: 21,
+        date: {
+            name: 'Tuesday',
+            month: 7,
+            day: 30
+        }
+    },
+    {
+        start: 17,
+        end: 21,
+        date: {
+            name: 'Thursday',
+            month: 8,
+            day: 1
+        }
+    },
+    {
+        start: 17,
+        end: 21,
+        date: {
+            name: 'Sunday',
+            month: 8,
+            day: 4
+        }
+    }
+]
+
+//Functions
+print = (string) => { line.firstElementChild.innerHTML += string }
+printLine = (string, def = true) => {
+    let oldLine = document.createElement('P')
+    oldLine.innerHTML = line.firstElementChild.innerHTML + " " + line.lastElementChild.value
+    con.insertBefore(oldLine, con.lastElementChild)
+    if (def) {
+        line.firstElementChild.innerHTML = '<span class="green">MajdTarbin@Portfolio</span>:<span class="blue">~/home</span>' + '<span class="blue">' + string + '</span>' + '$ '
+    }
+}
+replace = (string) => { line.firstElementChild.innerHTML = string }
+newLine = () => {
+    let oldLine = document.createElement('P')
+    oldLine.innerHTML = line.firstElementChild.innerHTML// + " " + line.lastElementChild.value
+    con.insertBefore(oldLine, con.lastElementChild)
+    line.firstElementChild.innerHTML = ''
+}
+
+printLine('')
+con.addEventListener('keydown', e => {
+    let val = line.lastElementChild.value
+    if (e.key === 'Enter') {
+        if (val.includes("cd")) {
+            val = val.replace("cd", '')
+            if (val === " gallery") {
+                printLine("/gallery")
+            }
+            else if (val === '' || " " || " ..") {
+                printLine("")
+            }
+        }
+        else if (val.includes("oakton")) {
+            printLine("")
+            window.open('https://bit.ly/oaktonschedule')
+            replace("opening")
+            printLine("")
+        }
+        else if (val.includes("maj")) {
+            printLine("")
+            replace("Maj's Schedule:")
+            maj.forEach(shift => {
+                newLine()
+                replace(`${shift.date.name} ${shift.date.month}/${shift.date.day}`)
+                newLine()
+                replace(`from ${shift.start} to ${shift.end}`)
+            })
+            line.lastElementChild.value = ''
+            printLine()
+        }
+        else if (val.includes("mad")) {
+            printLine("")
+            replace("Maddie's Schedule:")
+            mad.forEach(shift => {
+                newLine()
+                replace(`${shift.date.name} ${shift.date.month}/${shift.date.day}`)
+                newLine()
+                replace(`from ${shift.start} to ${shift.end}`)
+            })
+            line.lastElementChild.value = ''
+            printLine()
+        }
+        line.lastElementChild.value = ''
+
+    }
+
 })
-schedule = () => {
-    window.open('https://bit.ly/oaktonschedule')
-    let line = document.createElement('P')
-    line.innerHTML = consoleWindow.children[consoleWindow.children.length - 1].innerHTML.replace('<input class="input" type="text">', '') + ' ' + input.value
-    consoleWindow.insertBefore(line, consoleWindow.children[consoleWindow.children.length - 1])
-}
-cnf = () => {
-    let line = document.createElement('P')
-    let line2 = document.createElement('P')
-    let line3 = document.createElement('P')
-    line2.innerHTML = `<p>${nac[0]}</p>`
-    line3.innerHTML = `<p>${nac[1]}</p>`
-    line.innerHTML = consoleWindow.children[consoleWindow.children.length - 1].innerHTML.replace('<input class="input" type="text">', '') + ' ' + input.value
-    consoleWindow.insertBefore(line, consoleWindow.children[consoleWindow.children.length - 1])
-    consoleWindow.insertBefore(line2, consoleWindow.children[consoleWindow.children.length - 1])
-    consoleWindow.insertBefore(line3, consoleWindow.children[consoleWindow.children.length - 1])
-}
-logg = (string) => {
-    let line = document.createElement('P')
-    let line2 = document.createElement('P')
-    line2.innerHTML = `<p>${pwd}</p>`
-    line.innerHTML = consoleWindow.children[consoleWindow.children.length - 1].innerHTML.replace('<input class="input" type="text">', '') + ' pwd'
-    consoleWindow.insertBefore(line, consoleWindow.children[consoleWindow.children.length - 1])
-    consoleWindow.insertBefore(line2, consoleWindow.children[consoleWindow.children.length - 1])
-}
-openGallery = () => {
-    let line = document.createElement('P')
-    let line2 = document.createElement('P')
-    line.innerHTML = galleryLine
-    line2.innerHTML = project1Line
-    consoleWindow.insertBefore(line, consoleWindow.children[consoleWindow.children.length - 1])
-    consoleWindow.insertBefore(line2, consoleWindow.children[consoleWindow.children.length - 1])
-    consoleWindow.children[consoleWindow.children.length - 1].innerHTML = consoleWindow.children[consoleWindow.children.length - 1].innerHTML.replace('/home', '/home/gallery')
-    pwd = 'home/gallery'
-    inline = document.body.querySelector('.inline')
-    input = document.querySelector('.input')
-    document.querySelector('.input').focus();
-}
+con.addEventListener('click', () => { line.lastElementChild.focus() })

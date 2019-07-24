@@ -80,7 +80,7 @@ textarea:focus, input:focus {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    top: 0px;
+    top: -12px;
     left: 0px;
     width: 100%;
 }
@@ -88,11 +88,12 @@ textarea:focus, input:focus {
 .input {
     font-family: 'Roboto Mono', monospace;
     position: relative;
-    top: -13px;
     left: 11px;
+    top: 1px;
     color: #ddd;
     font-size: 18px;
     line-height: 0.05;
+    height: 20px;
     background: transparent;
     border: 0;
 }
@@ -115,7 +116,8 @@ textarea:focus, input:focus {
         padding: 3px;
     }
     .input {
-        width: 50px;
+        width: 80px;
         font-size: 14px;
+        left: 8.5px;
     }
   }
