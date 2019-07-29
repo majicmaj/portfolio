@@ -40,15 +40,6 @@ let mad = [
             month: 8,
             day: 1
         }
-    },
-    {
-        start: 17,
-        end: 21,
-        date: {
-            name: 'Sunday',
-            month: 8,
-            day: 4
-        }
     }
 ]
 
