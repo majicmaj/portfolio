@@ -73,7 +73,7 @@ newLine = () => {
 printLine('')
 con.addEventListener('keydown', e => {
     let val = line.lastElementChild.value
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.which == 13) {
         if (val.includes("cd")) {
             val = val.replace("cd", '')
             if (val === " gallery") {
