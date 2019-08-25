@@ -1,0 +1,23 @@
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.topnav_wrapper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.right, .left {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    padding-left: 20px;
+    color: #333;
+}
