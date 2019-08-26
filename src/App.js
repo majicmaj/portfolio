@@ -12,6 +12,7 @@ class App extends Component {
       <div className="App">
         <Nav />
         <RouteManager />
+        <div className='spacer'/>
         <Footer />
       </div>
     )

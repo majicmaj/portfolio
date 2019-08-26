@@ -1,6 +1,7 @@
 .topnav {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     padding: 14px 20px;
     width: 100%;
     max-width: 1024px;
@@ -19,5 +20,26 @@
 
 .link {
     padding-left: 20px;
-    color: #333;
+    color: #444;
+}
+
+.link:hover{
+    color: #f44;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        padding: 0;
+    }
+    .left {
+        padding-top: 10px;
+    }
+    .link {
+        padding: 0;
+    }
 }

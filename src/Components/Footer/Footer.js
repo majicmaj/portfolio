@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './Footer.css'
-import Linkedin from '../../Media/Social Media/linkedin.svg'
-import Github from '../../Media/Social Media/github.svg'
 
 class Footer extends Component {
     render() {
@@ -10,8 +8,9 @@ class Footer extends Component {
                 <footer className='footer'>
                     <div></div>
                     <div className='links'>
-                        <p className='social'>Linked in</p>
+                        <p className='social'>LinkedIn</p>
                         <p className='social'>Github</p>
+                        <p className='social'>Email</p>
                     </div>
                 </footer>
             </div>

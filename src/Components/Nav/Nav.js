@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './Nav.css'
 
 class Nav extends Component {
@@ -7,16 +8,26 @@ class Nav extends Component {
             <div className='topnav_wrapper'>
                 <nav className='topnav'>
                     <nav className='left'>
-                        <p className='logo'>majd tarbin</p>
+                        <Link to='/'>
+                            <p className='logo'>majd tarbin</p>
+                        </Link>
                     </nav>
                     <nav className='right'>
-                        <p className='link'>projects</p>
-                        <p className='link'>about</p>
-                        <p className='link'>contact</p>
+                        <Link to='/projects'>
+                            <p className='link'>projects</p>
+                        </Link>
+
+                        <Link to='/about'>
+                            <p className='link'>about</p>
+                        </Link>
+
+                        <Link to='/contact'>
+                            <p className='link'>contact</p>
+                        </Link>
                     </nav>
                 </nav>
             </div>
-            
+
         )
     }
 }
