@@ -79,6 +79,10 @@
   font-weight: normal;
 }
 
+.typing {
+  max-width: 1024px;
+}
+
 @-webkit-keyframes nameanimation {
   0% {
     color: #222;

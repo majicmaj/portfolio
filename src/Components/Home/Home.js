@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <div className='welcome_wrapper'>
-                <Typing>
+                <Typing className='typing'>
                     <h1 className='welcome'>
                         Hello! My name is <span className='name'>Majd Tarbin</span>.
                         I'm a full-stack software developer.
