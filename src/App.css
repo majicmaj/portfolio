@@ -4,12 +4,125 @@
 }
 
 .logo {
-  font-family: 'Satisfy', cursive;
+  font-family: inherit;
   font-size: 32px;
   color: #222;
   margin: 0;
 }
 
+.logo:hover, .logo::selection {
+  -webkit-animation-name: code;
+  -webkit-animation-duration: 1.2s;
+  animation-name: code;
+  animation-duration: 1.2s;
+}
+
+.skinny {
+  margin-top: 5px;
+  ;
+}
+
 .spacer {
   height: 60px;
+}
+
+.welcome {
+  font-size: 64px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: normal;
+}
+
+.welcome_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.buisness_card {
+  display: flex;
+  align-items: center;
+  height: 170px;
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px #ddd;
+  padding: 50px;
+}
+
+.name:hover {
+  -webkit-animation-name: nameanimation;
+  -webkit-animation-duration: 1.2s;
+  animation-name: nameanimation;
+  animation-duration: 1.2s;
+}
+
+.redbox {
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid #f44;
+  color: inherit;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #ddd;
+}
+
+.redbox:hover {
+  -webkit-animation-name: nameanimation;
+  -webkit-animation-duration: 1.2s;
+  animation-name: nameanimation;
+  animation-duration: 1.2s;
+}
+
+.project_ad {
+  font-family: monospace;
+  font-weight: normal;
+}
+
+@-webkit-keyframes nameanimation {
+  0% {
+    color: #222;
+  }
+  30% {
+    color: #f44;
+  }
+  100% {
+    color: #222
+  }
+}
+
+@keyframes nameanimation {
+  0% {
+    color: #222;
+  }
+  30% {
+    color: #f44;
+  }
+  100% {
+    color: #222
+  }
+}
+
+@-webkit-keyframes code {
+  0% {
+    color: #222;
+  }
+  30% {
+    color: #4f0;
+  }
+  100% {
+    color: #222
+  }
+}
+
+@keyframes code {
+  0% {
+    color: #222;
+  }
+  30% {
+    color: #4f0;
+  }
+  100% {
+    color: #222
+  }
 }

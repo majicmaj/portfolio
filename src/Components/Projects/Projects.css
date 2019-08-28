@@ -6,7 +6,7 @@
 }
 
 .singleproject {
-    width: 100%;
+    width: 80%;
     max-width: 1024px;
     border: 1px solid #ddd;
     min-height: 270px;
@@ -19,8 +19,9 @@
 }
 
 .singleproject img {
-    height: 270px;
-    width: 480px;
+    width: auto;
+    max-height: 270px;
+    min-width: 480px;
     object-fit: cover;
     border: 5px white solid;
     border-radius: 3px;
@@ -69,8 +70,8 @@
         padding: 5px;
     }
     .singleproject img {
-        width: 100%;
         height: auto;
+        min-width: 0;
         border: 0;
     }
 }
