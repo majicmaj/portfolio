@@ -13,17 +13,14 @@
     margin-top: 40px;
     margin-bottom: 10px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     border-radius: 3px;
     color: #333;
 }
 
 .singleproject img {
-    width: auto;
-    max-height: 270px;
-    min-width: 480px;
+    width: 100%;
     object-fit: cover;
-    border: 5px white solid;
     border-radius: 3px;
 }
 
@@ -60,6 +57,9 @@
 .singleproject_links a {
     border: #ddd 1px solid;
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
     border-radius: 2px;
 }
 
@@ -73,5 +73,11 @@
         height: auto;
         min-width: 0;
         border: 0;
+    }
+    .singleproject a {
+        font-size: 16px;
+        padding: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
