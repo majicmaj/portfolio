@@ -8,7 +8,7 @@ class Footer extends Component {
             linkedin: 'https://www.linkedin.com/in/majdtarbin/',
             github: 'https://github.com/majicmaj',
             email: 'mailto:majdtarbin@outlook.com',
-            resume: 'https://docs.google.com/document/d/1m0uzW9fHm6e1qOGo-DAJ2WQbYwc_vr740OiTutpCwZQ/edit?usp=sharing'
+            resume: 'https://drive.google.com/file/d/13e6RSGEaxXX0y659aBt1GKDEPw8IlW2X/view'
         }
         return (
             <div className='footer_wrapper'>
