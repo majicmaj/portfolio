@@ -7,6 +7,7 @@ import projectTwo from '../../Media/Projects/lolbuilder.png'
 class Footer extends Component {
     render() {
         return (
+            <div className='projects_out'>
             <div className='projects_wrapper'>
                 <SingleProject
                     img={projectTwo}
@@ -26,7 +27,8 @@ class Footer extends Component {
                     url='https://majicmaj.github.io/'
                     repo='https://github.com/majicmaj/rocketball'
                 />
-            </div>
+                </div>
+                </div>
         )
     }
 }

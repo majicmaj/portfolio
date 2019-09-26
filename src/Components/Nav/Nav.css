@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 14px 20px;
+    padding: 8px 20px;
     width: 100%;
     max-width: 1024px;
     min-height: 5vh;
@@ -17,15 +17,21 @@
 .right, .left {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .link {
-    padding-left: 20px;
+    padding: 4px 20px;
     color: #444;
+    font-size: 20px;
 }
 
 .link:hover {
-    color: #f44;
+    color: #fff;
+    background: #f44;
+    border-radius: 5px;
+    animation: linkanimation 1s forwards;
+    -webkit-animation: linkanimation 1s forwards;
 }
 
 .console {
@@ -51,7 +57,37 @@ a {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@-webkit-keyframes linkanimation {
+    0% {
+        color: #444;
+        background: none;
+    }
+    30% {
+        color: #f44;
+        background: none;
+        border: #f44 1px solid;
+    }
+    100% {
+        color: #fff;
+        background: #f44;
+        border: #f44 1px solid;
+    }
+}
+
+@keyframes linkanimation {
+    0% {
+        color: #444;
+        background: none;
+    }
+    30% {
+        color: #f44;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 968px) {
     .logo {
         font-size: 24px;
     }

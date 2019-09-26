@@ -7,17 +7,13 @@ class About extends Component {
         return (
             <div className='welcome_wrapper'>
                 <div className='buisness_card'>
-                    <Typing>
-                        <p>
+                        <div>
                             <h2 className='skinny'><span className='name'>Majd Tarbin</span></h2>
-                            Full-Stack Software Developer.
-                            </p>
-                            <p>
-                            I'm a full-stack software developer from Damascus, Syria. I have about 5 years of experience with programming and 3 years of professional experience.
-                            <p>phone:<span className='link'>251-513-2053    </span>
-                            email:<span className='link'>majdtarbin@outlook.com</span></p>
-                    </p>
-                    </Typing>
+                            <p>Full-Stack Software Developer.</p>
+                        </div>
+                    <p className='mission'>As a software developer, the dedication to the human factor is the most important aspect of the results I deliver. I want my work to serve human welfare while innovatively tackling the challenging problems that come with my mission.</p>
+                    <p>phone:<span className='link'>251-513-2053    </span></p>
+                    <p>email:<span className='link'>majdtarbin@outlook.com</span></p>
 
                 </div>
             </div>
