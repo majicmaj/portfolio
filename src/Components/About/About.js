@@ -13,7 +13,7 @@ class About extends Component {
                             Full-Stack Software Developer.
                             </p>
                             <p>
-                            I'm a full-stack software developer from Damascus, Syria. I have about 5 years of experience with programming and what translates to 3 years of professional experience.
+                            I'm a full-stack software developer from Damascus, Syria. I have about 5 years of experience with programming and 3 years of professional experience.
                             <p>phone:<span className='link'>251-513-2053    </span>
                             email:<span className='link'>majdtarbin@outlook.com</span></p>
                     </p>
