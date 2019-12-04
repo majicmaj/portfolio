@@ -13,6 +13,10 @@ class RouteManager extends Component {
                 <Route
                     exact path='/'
                     component={Home}
+                />
+                <Route
+                    exact path='/home'
+                    component={Home}
                 /><Route
                     path='/about'
                     component={About}
