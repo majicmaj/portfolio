@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <div className='welcome_wrapper'>
-                <div className='typing'>
+                <Typing className='typing'>
                     <h1 className='welcome'>
                         Hello! My name is <span className='name'>Majd Tarbin</span>.
                         I'm a full-stack software developer.
@@ -14,7 +14,7 @@ class Home extends Component {
                     <h2 className='project_ad'>
                         Take a look at my <Link to='/projects' className='redbox'>projects</Link>
                     </h2>
-                </div>
+                </Typing>
 
             </div>
         )
