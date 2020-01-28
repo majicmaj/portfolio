@@ -85,6 +85,13 @@
   background: #ddd;
   border: #ddd 1px solid;
 }
+
+.singleproject .technology {
+  background: #f44;
+  height: 42px;
+  width: min-content;
+  padding: 5px;
+}
 @-webkit-keyframes fadeImage {
   0% {
     color: rgba(10, 10, 10, 0);

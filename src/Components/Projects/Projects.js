@@ -6,7 +6,7 @@ import projectTwo from "../../Media/Projects/lolbuilder.png";
 import projectThree from "../../Media/Projects/legendsapi.png";
 import projectFour from "../../Media/Projects/silvershackcoins.png";
 
-class Footer extends Component {
+class Projects extends Component {
   render() {
     return (
       <div className="projects_out">
@@ -53,4 +53,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default Projects;

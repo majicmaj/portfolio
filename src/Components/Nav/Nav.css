@@ -1,107 +1,115 @@
 .topnav {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 8px 20px;
-    width: 100%;
-    max-width: 1024px;
-    min-height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 8px 20px;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 5vh;
 }
 
 .topnav_wrapper {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.right, .left {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.right,
+.left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .link {
-    padding: 4px 20px;
-    color: #444;
-    font-size: 20px;
+  padding: 4px 20px;
+  color: #444;
+  font-size: 20px;
 }
-
+.link::-moz-focus-inner {
+  border: 0;
+}
 .link:hover {
-    color: #fff;
-    background: #f44;
-    border-radius: 5px;
-    animation: linkanimation 1s forwards;
-    -webkit-animation: linkanimation 1s forwards;
+  color: #fff;
+  background: #f44;
+  border-radius: 5px;
+  animation: linkanimation 1s forwards;
+  -webkit-animation: linkanimation 1s forwards;
 }
 
 .console {
-    width: 100%;
-    font-size: 24px;
-    height: 24px;
-    margin: 0;
-    color: inherit;
-    border: 0;
-    display: none;
-    padding: 10px;
+  width: 100%;
+  font-size: 24px;
+  height: 24px;
+  margin: 0;
+  color: inherit;
+  border: 0;
+  display: none;
+  padding: 10px;
 }
 
 .active {
-    background: #222;
-    color: #4c0;
-    border-radius: 5px;
-    display: block;
-    font-family: inherit;
+  background: #222;
+  color: #4c0;
+  border-radius: 5px;
+  display: block;
+  font-family: inherit;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+}
+
+a::-moz-focus-inner {
+  border: 0;
 }
 
 @-webkit-keyframes linkanimation {
-    0% {
-        color: #444;
-        background: none;
-    }
-    30% {
-        color: #f44;
-        background: none;
-        border: #f44 1px solid;
-    }
-    100% {
-        color: #fff;
-        background: #f44;
-        border: #f44 1px solid;
-    }
+  0% {
+    color: #444;
+    background: none;
+  }
+  30% {
+    color: #f44;
+    background: none;
+    border: #f44 1px solid;
+  }
+  100% {
+    color: #fff;
+    background: #f44;
+    border: #f44 1px solid;
+  }
 }
 
 @keyframes linkanimation {
-    0% {
-        color: #444;
-        background: none;
-    }
-    30% {
-        color: #f44;
-    }
-    100% {
-        color: #fff;
-    }
+  0% {
+    color: #444;
+    background: none;
+  }
+  30% {
+    color: #f44;
+  }
+  100% {
+    color: #fff;
+  }
 }
 
 @media only screen and (max-width: 968px) {
-    .logo {
-        font-size: 24px;
-    }
-    .topnav {
-        flex-direction: column;
-        padding: 0;
-    }
-    .left {
-        padding-top: 10px;
-    }
-    .link {
-        padding: 0;
-    }
-    .welcome {
-        font-size: 24px;
-    }
+  .logo {
+    font-size: 24px;
+  }
+  .topnav {
+    flex-direction: column;
+    padding: 0;
+  }
+  .left {
+    padding-top: 10px;
+  }
+  .link {
+    padding: 5px;
+  }
+  .welcome {
+    font-size: 24px;
+  }
 }
