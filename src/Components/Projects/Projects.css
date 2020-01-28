@@ -58,7 +58,7 @@
   color: #222;
   background: #fff;
   opacity: 0.9;
-  -webkit-animation: fadeImage 1s forwards;
+  -webkit-animation: fadeImage 0.25s forwards;
 }
 
 .singleproject_links {
