@@ -17,7 +17,7 @@ class Footer extends Component {
             description="
             E-commerce online shop for client in React, with Django backend planned!
                     "
-            url="https://lolbuilder.herokuapp.com/"
+            url="https://silvershackcoins.netlify.com/"
             repo="https://github.com/majicmaj/silvershackcoin"
           />
           <SingleProject
