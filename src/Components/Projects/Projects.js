@@ -15,7 +15,7 @@ class Projects extends Component {
             img={projectFour}
             title="Silver Shack Coins"
             description="
-            E-commerce online shop for client in React, with Django backend planned!
+            E-commerce online shop for client built in React with an express backend
                     "
             url="https://silvershackcoins.netlify.com/"
             repo="https://github.com/majicmaj/silvershackcoin"
